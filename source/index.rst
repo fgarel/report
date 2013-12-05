@@ -35,7 +35,7 @@ Table des matières
 ..   :maxdepth: 2
 
 .. include:: GTReseaux/GTReseaux.rst
-
+.. include:: patrimoine/patrimoine.rst
 
 
 .. Indices and tables
