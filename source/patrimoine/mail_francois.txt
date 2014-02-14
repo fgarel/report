@@ -1,0 +1,51 @@
+Bonjour,
+
+
+1er Point : reprise des données de GIMA
+---------------------------------------
+
+Sous ATAL, les informations Patrimoine Bati semblent correctes.
+Ce sont les informations "éléments" qui sont incorrectes.
+
+Or, les informations relatives au patrimoine bati n'ont pas beaucoup évolué depuis l'intégration des données GIMA sous ATAL.
+
+Faut-il rejouer ou non les scripts d'import de GIMA vers ATAL ? Il faut mettre comparer les deux possibilités.
+
+Les inconvénients de ne pas rejouer les scripts :
+
+Le temps passé à reprendre manuellement les informations équipements.
+Les équipements rattachés au patrimoine doivent être modifiés puis vérifiés à la main, avec d'un coté la base ATAL et de l'autre la base GIMA.
+La masse de travail que représente cette tache fastidieuse me parait beaucoup plus importante que les quelques petites modifications à reprendre sur le patrimoine, qui elles, sont minimes.
+
+
+Les inconvéients de rejouer les scripts :
+
+Il faudra faire attention à importer les données patrimoine et éléments de patrimoine sans écraser les autres informations.
+
+
+Il est important de soumettre ce problème à Aductis.
+
+2d Point : Procédure pour l'import massif de données, ou la mise à jour massive de doinnées.
+--------------------------------------------------------------------------------------------
+Dans le point précédent, on a évoqué la récupération des données GIMA vers ATAL.
+En faisant le tour des différents services, il est apparu que les agents disposent d'informations, la plupart du temps compilées sous la forme d'un tableau, qui sont ni dans ATAL, ni dans GIMA.
+Par exemple, un document excel correspond aux informations relatives aux compteurs éléctriques (relevé).
+Une autre document correspond aux informations relatives aux opérations de vérification des équipements de sécurité.
+Etc...
+
+Ces données sont soit constituées directement par les agents, soit récupérées auprès de prestatatires extérieurs.
+Ces données peuvent correspondre à des informations relativement stable dans le temps (intégration unique, modification à la marge), mais peuvent aussi correspondre à des informations changeantes (integration puis mise à jour périodique à faire par l'agent).
+
+Si le souhait est d'intégrer ces données sous ATAL, nous devons étudier différents éléments :
+
+- Respect d'un format pour les données initiales :
+  Exemple, les equipements de sécurité incendie correspondent à un fichier de type tableur,
+    - la première colonne est le numéro de l'équipement (déja enregistré sous ATAL etlocalisé sur un site)
+    - la seconde colonne est la date de vérification
+    - la troisième colonne est le résulta de la vérification ("ok" ou "à réparer")
+      ...
+- Integration de ces fichiers de données par les agents de la Ville
+  les fichiers qui correspondent à des 
+  
+
+
