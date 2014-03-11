@@ -17,5 +17,5 @@ Les données sous ATAL
 L'existant
 ----------
 
-Les améliiorations
-------------------
+Les améliorations
+-----------------
