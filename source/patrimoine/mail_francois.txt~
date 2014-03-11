@@ -40,7 +40,7 @@ Si le souhait est d'intégrer ces données sous ATAL, nous devons étudier diff�
 
 - Respect d'un format pour les données initiales :
   Exemple, les equipements de sécurité incendie correspondent à un fichier de type tableur,
-    - la première colonne est le numéro de l'équipement (déja enregistré sous ATAL et localisé sur un site)
+    - la première colonne est le numéro de l'équipement (déja enregistré sous ATAL etlocalisé sur un site)
     - la seconde colonne est la date de vérification
     - la troisième colonne est le résulta de la vérification ("ok" ou "à réparer")
       ...
