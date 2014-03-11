@@ -29,7 +29,7 @@ Sous ATAL, il y a deux procédures pour ajouter une information à un objet :
 
 Classification
 --------------
-Un attribut de type "Classification" est accessible dans l'onglet "Informations Générales"
+Un attribut de type "Classification" est accessible dans l'onglet Informations Générales
 La configuration de ces attributs se fait dans :
 Références/Equipements/Quartier
 Références/Equipements/Secteur
@@ -38,7 +38,7 @@ Patrimoine/Références/Classifications
 
 Catégorie
 ---------
-Un attribut de type "Catégorie" est accessible dans l'onglet "Infos complémentaires"
+Un attribut de type "Catégorie" est accessible dans l'onglet Infos complémentaires
 La configuration de ces attributs se fait dans :
 Batiments/Références/Caractéristiques des bâtiments
 
