@@ -4,6 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
+HOVERCRAFT    = hovercraft
 PAPER         =
 BUILDDIR      = build
 
@@ -38,6 +39,8 @@ help:
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  slideshie  to make slides, hieroglyph"
+	@echo "  slideshov  to make slides, hovercraft"
 
 clean:
 	-rm -rf $(BUILDDIR)/*
@@ -112,6 +115,28 @@ latexpdf:
 slides:
 	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) $(BUILDDIR)/slides
 	@echo "Build finished. The HTML slides are in $(BUILDDIR)/slides."
+
+slideshie:
+	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) $(BUILDDIR)/slideshie
+	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshie."
+
+slideshov:
+	#$(HOVERCRAFT) source/hovercraftPositions.rst $(BUILDDIR)/slideshov
+	#cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftPositions.html
+	#$(HOVERCRAFT) source/hovercraftTutorial.rst $(BUILDDIR)/slideshov
+	#cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftTutorial.html
+	#$(HOVERCRAFT) source/hovercraftHovercraft.rst $(BUILDDIR)/slideshov
+	#cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftHovercraft.html
+	#$(HOVERCRAFT) source/hovercraft.rst $(BUILDDIR)/slideshov
+	#cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraft.html
+	# index ( attention  à la directive include )
+	#$(HOVERCRAFT) source/index.rst $(BUILDDIR)/slideshov
+	# geogig_hovercraft
+	$(HOVERCRAFT) source/QGisEnCoulisse/presentation_hov.rst $(BUILDDIR)/slideshov
+	cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/presentation_hov.html
+	#$(HOVERCRAFT) source/geogig/geogig.rst $(BUILDDIR)/slideshov
+	#cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/geogig.html
+	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshov."
 
 text:
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text
