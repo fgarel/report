@@ -61,3 +61,26 @@ slideshov:
 pew workon ecriture_sphinx
 (hovercraft)
 make
+
+
+## et Plantuml ?
+
+@startuml
+actor "Utilisateur A"
+participant Navigateur
+participant "Serveur HTTP"
+actor "Utilisateur B"
+participant "QGis Dektop"
+participant "QGis Server"
+
+"Utilisateur B" -> "QGis Dektop" : Préparation des\nfichiers .qgs et .tpl
+"Utilisateur B" -> "QGis Server" : Le fichier .qgs\nest intégré dans\nla configuration de\nQgis Server
+"Utilisateur A" -> "Navigateur" : Formulaire
+"Navigateur" -> "QGis Server" : Demande d'un flux WMS
+"Navigateur" <- "QGis Server" : Affichage du flux WMS
+"Navigateur" -> "Serveur HTTP" : Fourniture d'une\nemprise géographique\n(POST)
+"Serveur HTTP" -> "QGis Dektop" : Commandes Python
+"Serveur HTTP" <- "QGis Dektop" : Fourniture de la carte\nau format pdf
+"Navigateur" <- "Serveur HTTP" : Fourniture du\nfichier résultat
+"Utilisateur A" <- Navigateur : Affichage de la carte
+@enduml
