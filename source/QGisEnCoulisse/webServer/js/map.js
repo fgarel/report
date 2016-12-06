@@ -19,7 +19,7 @@ function initMap(){
 	  // projection's validity extent can be found at http://epsg.io/.
 	  extent: [1372000.0,5207000.0,1403020.0000000002 , 5238000.0],
 	  units: 'm'
-	});	
+	});
 	var ortho2013Extend =projectionCC46.getExtent();// [1372000,5207000,1405000, 5240000]
 	var matrixIds = new Array(11);
 	var resolutions = new Array(11);
@@ -55,12 +55,13 @@ function initMap(){
     var qgisEnCoulisse = new ol.layer.Image({
 					title: 'Carte du CCAS',
 					source: new ol.source.ImageWMS({
-                        url: 'http://localhost/qgis-ltr/qgis_mapserv.fcgi.exe?map=QGisEnCoulisse.qgs',
+            url: 'http://localhost/qgis-ltr/qgis_mapserv.fcgi.exe?map=QGisEnCoulisse.qgs',
 						params: {'LAYERS': 'ortho2013,cadastre','FORMAT': 'image/png', 'CRS':'EPSG:3946'}})
 					}),
-	
+
 	map = new ol.Map({
-		layers:[qgisEnCoulisse,printExtentLayer],
+		//layers:[qgisEnCoulisse,printExtentLayer],
+		layers:[ortho2013,printExtentLayer],
 		target: 'map',
 		controls:[],
 		/*controls: ol.control.defaults().extend([
@@ -95,7 +96,7 @@ function createShape(){
         var feature = new ol.Feature(new ol.geom.Polygon.fromExtent(mapExtent));
         source.clear();
         source.addFeature(feature);
-        
+
 }
 function eraseDraw(){
     source.clear();
@@ -135,6 +136,6 @@ function getMaps(){
             }
         });
     }
-   
+
 }
 initMap();
