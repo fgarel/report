@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>QGis En Coulisse</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--OpenLayers-->
+    <link rel="stylesheet" href="OL3/css/ol.css" type="text/css">
+	<script src="OL3/build/ol.js"></script>
+    
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+        <div id="myModal" class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body" style="text-align:center">
+                <p>Génération des plans ...</p>
+                <img src="images/loading.gif" id="loading-indicator" style="width:120px"/>
+              </div>
+              
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="page-header">
+            <h1>Génération de PDF <small>Utilisation de Qgis par commandes</small></h1>
+        </div>
+        <div class="row">
+            
+            <div id="map_container" class="col-sm-9">
+                <div id="panel_map" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title pull-left">Carte</h3>
+                        <button class="btn btn-default pull-right" onclick="eraseDraw();"><i class="glyphicon glyphicon-trash"></i></button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body map_cont">
+                        <div id="map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="conainer_container" class="col-sm-3">
+                <div id="panel_map" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Paramètres</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form" role="form" >
+                            <div class="form-group-vertical col-sm-12 col-xs-6" >
+                                Type de plan :
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="layers_list">Orthophotoplan</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="layers_list">Plan de ville</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="layers_list">Cadastre</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox" name="layers_list">Réseaux</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group-vertical col-sm-12 col-xs-6">
+                                Présentation :
+                                <div class="form-group">
+                                    <label class="col-lg-12 control-label" >Orientation</label>
+                                    <div class="col-lg-12 selectContainer">
+                                        <select class="form-control" id="comboOrientation" name="orientation">
+                                            <option value="Paysage">Paysage</option>
+                                            <option value="Portrait">Portrait</option>
+                                        </select>
+                                    </div>
+                                    <label class="col-lg-12 control-label">Format</label>
+                                    <div class="col-lg-12 selectContainer">
+                                        <select class="form-control" id="comboFormat" name="format">
+                                            <option value="A4">A4</option>
+                                            <option value="A3">A3</option>
+                                            <option value="A2">A2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group-vertical col-sm-12 col-xs-6">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button" onclick="getMaps();">
+                                      Obtenir les plans <span id="badge" class="badge">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>

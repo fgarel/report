@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>OSGeo4W - OSGeo for Windows</title>
+<style type="text/css">
+<!--
+body {  font-family: Arial, Helvetica, sans-serif; font-size: 12px} -->
+</style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF">
+<img src="images/osgeo.png" width="262" hieght="117">
+<h1>OSGeo4W - OSGeo for Windows</h1>
+
+<?php
+// *include* pkg files in the form app_name.pkg.html
+$nApps = 0;
+$szApps = "";
+$szDir = dirname(__FILE__);
+//remove old index.html if possible
+if (is_file( $szDir."/index.html" ))
+{
+    $bResult = @unlink( $szDir."/index.html" );
+    if ($bResult === false)
+    {
+        echo "<p>Note: unable to remove <b>index.html</b>.  Please remove this";
+        echo "file manually ($szDir\\index.html).  You will see this message";
+        echo "until this file is removed.</p>";
+    }
+    else
+    {
+        echo "<p>Note: old index.phtml page sucessfully removed (you will not";
+        echo "see this message again)</p>";
+    }
+}
+if (is_dir($szDir))
+{
+    if ($hDir = opendir($szDir))
+    {
+        while (($szFile = readdir( $hDir )) !== false)
+        {
+            if ( strcasecmp( substr( $szFile, -9 ), ".pkg.html" ) == 0 )
+            {
+                $szApps .= implode( "\n", file( $szDir."/".$szFile ) )."\n";
+                $nApps ++;
+            }
+        }
+        closedir( $hDir );
+    }
+    else
+    {
+        echo "<p>No packages, unable to open $szDir.</p>";
+    }
+}
+else
+{
+    echo "<p>No packages, $szDir is not a directory.</p>";
+}
+?>
+<h2> Installed Web Applications and Features<a name="Applications"></a></h2>
+<p>There <?php echo ($nApps == 1) ? "is" : "are" ?> currently
+   <?php echo $nApps?> osgeo4w application<?php echo ($nApps == 1) ? "" : "s" ?>
+   installed.
+</p>
+<?php echo $szApps; ?>
+</body>
+</html>

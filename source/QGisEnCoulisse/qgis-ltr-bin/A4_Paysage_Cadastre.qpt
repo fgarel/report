@@ -1,0 +1,299 @@
+<Composer title="A4_Payasage_Cadastre" visible="1">
+ <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+  <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+   <layer pass="0" class="SimpleFill" locked="0">
+    <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+    <prop k="color" v="255,255,255,255"/>
+    <prop k="joinstyle" v="miter"/>
+    <prop k="offset" v="0,0"/>
+    <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+    <prop k="offset_unit" v="MM"/>
+    <prop k="outline_color" v="0,0,0,255"/>
+    <prop k="outline_style" v="no"/>
+    <prop k="outline_width" v="0.26"/>
+    <prop k="outline_width_unit" v="MM"/>
+    <prop k="style" v="solid"/>
+   </layer>
+  </symbol>
+  <ComposerScaleBar lineCapStyle="square" style="Single Box" numMapUnitsPerScaleBarUnit="1" segmentSizeMode="0" alignment="0" numSegments="5" segmentMillimeters="9.99918" lineJoinStyle="miter" minBarWidth="50" numUnitsPerSegment="100" units="1" labelBarSpace="3" outlineWidth="0.3" numSegmentsLeft="0" maxBarWidth="150" height="3" boxContentSpace="1" mapId="2" unitLabel=" m">
+   <scaleBarFont description="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" style=""/>
+   <fillColor alpha="255" red="0" blue="0" green="0"/>
+   <fillColor2 alpha="255" red="255" blue="255" green="255"/>
+   <strokeColor alpha="255" red="0" blue="0" green="0"/>
+   <textColor alpha="255" red="0" blue="0" green="0"/>
+   <ComposerItem pagey="196.929" page="1" id="" lastValidViewScaleFactor="-1" positionMode="8" positionLock="false" x="233.704" y="196.929" visibility="1" zValue="5" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="63.2959" outlineWidth="0.3" excludeFromExports="0" uuid="{e388cba1-110c-42ef-88fd-c71eb346afef}" height="13.0707" itemRotation="0" frame="false" pagex="233.704">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerScaleBar>
+  <ComposerLegend symbolWidth="7" title="Légende" rasterBorderWidth="0" titleAlignment="1" map="2" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="2" rasterBorder="1">
+   <styles>
+    <style marginBottom="2" name="title">
+     <styleFont description="MS Shell Dlg 2,16,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="2" name="group">
+     <styleFont description="MS Shell Dlg 2,14,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="2" name="subgroup">
+     <styleFont description="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="2" name="symbol">
+     <styleFont description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="2" marginLeft="2" name="symbolLabel">
+     <styleFont description="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+   </styles>
+   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+    <customproperties/>
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="geojson20161207120858838" name="geojson OGRGeoJSON Polygon">
+     <customproperties>
+      <property key="legend/title-label" value="Emprise"/>
+     </customproperties>
+    </layer-tree-layer>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="cadastre">
+     <customproperties/>
+     <layer-tree-layer expanded="1" checked="Qt::Checked" id="QGisEnCoulisse_cad_parcelle_any20161201150632915" name="cad_parcelle">
+      <customproperties>
+       <property key="legend/title-label" value="Parcelle"/>
+      </customproperties>
+     </layer-tree-layer>
+     <layer-tree-layer expanded="1" checked="Qt::Checked" id="QGisEnCoulisse_cad_bati_dur_any20161201150632821" name="QGisEnCoulisse cad_bati_dur any">
+      <customproperties>
+       <property key="legend/title-label" value="Bati"/>
+      </customproperties>
+     </layer-tree-layer>
+    </layer-tree-group>
+   </layer-tree-group>
+   <ComposerItem pagey="124.065" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="231" y="124.065" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="27.8" outlineWidth="0.3" excludeFromExports="0" uuid="{9f99b3e6-c8db-48f5-9c0e-09770d4da6e9}" height="38.6" itemRotation="0" frame="false" pagex="231">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerLegend>
+  <ComposerMap mapRotation="0" keepLayerSet="true" id="2" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="5226359.42398435529321432" xmin="1377103.03685887344181538" ymax="5226759.423984763212502" xmax="1377673.03685945505276322"/>
+   <LayerSet>
+    <Layer>QGisEnCoulisse_cad_parcelle_any20161201150632915</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_leger_any20161201150632867</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_dur_any20161201150632821</Layer>
+   </LayerSet>
+   <Grid/>
+   <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{c60db53b-8716-445a-84c6-d40337a08f64}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grille 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+    <lineStyle>
+     <symbol alpha="1" clip_to_extent="1" type="line" name="">
+      <layer pass="0" class="SimpleLine" locked="0">
+       <prop k="capstyle" v="square"/>
+       <prop k="customdash" v="5;2"/>
+       <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="customdash_unit" v="MM"/>
+       <prop k="draw_inside_polygon" v="0"/>
+       <prop k="joinstyle" v="bevel"/>
+       <prop k="line_color" v="0,0,0,255"/>
+       <prop k="line_style" v="solid"/>
+       <prop k="line_width" v="0"/>
+       <prop k="line_width_unit" v="MM"/>
+       <prop k="offset" v="0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="use_custom_dash" v="0"/>
+       <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+      </layer>
+     </symbol>
+    </lineStyle>
+    <markerStyle>
+     <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+      <layer pass="0" class="SimpleMarker" locked="0">
+       <prop k="angle" v="0"/>
+       <prop k="color" v="0,0,0,255"/>
+       <prop k="horizontal_anchor_point" v="1"/>
+       <prop k="name" v="circle"/>
+       <prop k="offset" v="0,0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="outline_color" v="0,0,0,255"/>
+       <prop k="outline_style" v="solid"/>
+       <prop k="outline_width" v="0"/>
+       <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="outline_width_unit" v="MM"/>
+       <prop k="scale_method" v="diameter"/>
+       <prop k="size" v="2"/>
+       <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="size_unit" v="MM"/>
+       <prop k="vertical_anchor_point" v="1"/>
+      </layer>
+     </symbol>
+    </markerStyle>
+    <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+   </ComposerMapGrid>
+   <ComposerMapOverview frameMap="0" centered="0" inverted="0" uuid="{7c3ae421-5a5b-4d9d-b815-3b9cb6ea773e}" name="Aperçu 1" show="1" blendMode="0">
+    <symbol alpha="0.3" clip_to_extent="1" type="fill" name="">
+     <layer pass="0" class="SimpleFill" locked="0">
+      <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+      <prop k="color" v="255,0,0,255"/>
+      <prop k="joinstyle" v="bevel"/>
+      <prop k="offset" v="0,0"/>
+      <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+      <prop k="offset_unit" v="MM"/>
+      <prop k="outline_color" v="0,0,0,255"/>
+      <prop k="outline_style" v="no"/>
+      <prop k="outline_width" v="0.26"/>
+      <prop k="outline_width_unit" v="MM"/>
+      <prop k="style" v="solid"/>
+     </layer>
+    </symbol>
+   </ComposerMapOverview>
+   <AtlasMap scalingMode="0" atlasDriven="1" margin="0.10000000000000001"/>
+   <ComposerItem pagey="80" page="1" id="" lastValidViewScaleFactor="1.93651" positionMode="0" positionLock="false" x="230" y="80" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="57" outlineWidth="0.3" excludeFromExports="0" uuid="{df4bbee0-71c0-47ea-87ef-5783f7606371}" height="40" itemRotation="0" frame="false" pagex="230">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <ComposerMap mapRotation="0" keepLayerSet="true" id="1" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="5226059.42398404981940985" xmin="1376675.53685843758285046" ymax="5227059.42398506961762905" xmax="1378100.53685989091172814"/>
+   <LayerSet>
+    <Layer>QGisEnCoulisse_cad_parcelle_any20161201150632915</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_leger_any20161201150632867</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_dur_any20161201150632821</Layer>
+   </LayerSet>
+   <Grid/>
+   <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{12a03511-2d91-468b-9c76-41707847ed2b}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grille 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+    <lineStyle>
+     <symbol alpha="1" clip_to_extent="1" type="line" name="">
+      <layer pass="0" class="SimpleLine" locked="0">
+       <prop k="capstyle" v="square"/>
+       <prop k="customdash" v="5;2"/>
+       <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="customdash_unit" v="MM"/>
+       <prop k="draw_inside_polygon" v="0"/>
+       <prop k="joinstyle" v="bevel"/>
+       <prop k="line_color" v="0,0,0,255"/>
+       <prop k="line_style" v="solid"/>
+       <prop k="line_width" v="0"/>
+       <prop k="line_width_unit" v="MM"/>
+       <prop k="offset" v="0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="use_custom_dash" v="0"/>
+       <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+      </layer>
+     </symbol>
+    </lineStyle>
+    <markerStyle>
+     <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+      <layer pass="0" class="SimpleMarker" locked="0">
+       <prop k="angle" v="0"/>
+       <prop k="color" v="0,0,0,255"/>
+       <prop k="horizontal_anchor_point" v="1"/>
+       <prop k="name" v="circle"/>
+       <prop k="offset" v="0,0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="outline_color" v="0,0,0,255"/>
+       <prop k="outline_style" v="solid"/>
+       <prop k="outline_width" v="0"/>
+       <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="outline_width_unit" v="MM"/>
+       <prop k="scale_method" v="diameter"/>
+       <prop k="size" v="2"/>
+       <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="size_unit" v="MM"/>
+       <prop k="vertical_anchor_point" v="1"/>
+      </layer>
+     </symbol>
+    </markerStyle>
+    <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+   </ComposerMapGrid>
+   <ComposerMapOverview frameMap="0" centered="0" inverted="0" uuid="{ec15499a-de0a-45d1-8d42-73216444b9a8}" name="Aperçu 1" show="1" blendMode="0">
+    <symbol alpha="0.3" clip_to_extent="1" type="fill" name="">
+     <layer pass="0" class="SimpleFill" locked="0">
+      <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+      <prop k="color" v="255,0,0,255"/>
+      <prop k="joinstyle" v="bevel"/>
+      <prop k="offset" v="0,0"/>
+      <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+      <prop k="offset_unit" v="MM"/>
+      <prop k="outline_color" v="0,0,0,255"/>
+      <prop k="outline_style" v="no"/>
+      <prop k="outline_width" v="0.26"/>
+      <prop k="outline_width_unit" v="MM"/>
+      <prop k="style" v="solid"/>
+     </layer>
+    </symbol>
+   </ComposerMapOverview>
+   <AtlasMap scalingMode="0" atlasDriven="1" margin="0.10000000000000001"/>
+   <ComposerItem pagey="30" page="1" id="" lastValidViewScaleFactor="1.93651" positionMode="0" positionLock="false" x="230" y="30" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="57" outlineWidth="0.3" excludeFromExports="0" uuid="{17c0f95e-deeb-4690-88df-66dcdfd73612}" height="40" itemRotation="0" frame="false" pagex="230">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <ComposerMap mapRotation="0" keepLayerSet="true" id="0" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="5226420.59634606167674065" xmin="1377178.03685895004309714" ymax="5226760.5963464081287384" xmax="1377598.03685937845148146"/>
+   <LayerSet>
+    <Layer>geojson20161207120858838</Layer>
+    <Layer>QGisEnCoulisse_cad_parcelle_any20161201150632915</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_leger_any20161201150632867</Layer>
+    <Layer>QGisEnCoulisse_cad_bati_dur_any20161201150632821</Layer>
+   </LayerSet>
+   <Grid/>
+   <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{025ea26a-23b0-4467-a425-45dc2d44ca23}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grille 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+    <lineStyle>
+     <symbol alpha="1" clip_to_extent="1" type="line" name="">
+      <layer pass="0" class="SimpleLine" locked="0">
+       <prop k="capstyle" v="square"/>
+       <prop k="customdash" v="5;2"/>
+       <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="customdash_unit" v="MM"/>
+       <prop k="draw_inside_polygon" v="0"/>
+       <prop k="joinstyle" v="bevel"/>
+       <prop k="line_color" v="0,0,0,255"/>
+       <prop k="line_style" v="solid"/>
+       <prop k="line_width" v="0"/>
+       <prop k="line_width_unit" v="MM"/>
+       <prop k="offset" v="0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="use_custom_dash" v="0"/>
+       <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+      </layer>
+     </symbol>
+    </lineStyle>
+    <markerStyle>
+     <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+      <layer pass="0" class="SimpleMarker" locked="0">
+       <prop k="angle" v="0"/>
+       <prop k="color" v="0,0,0,255"/>
+       <prop k="horizontal_anchor_point" v="1"/>
+       <prop k="name" v="circle"/>
+       <prop k="offset" v="0,0"/>
+       <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="outline_color" v="0,0,0,255"/>
+       <prop k="outline_style" v="solid"/>
+       <prop k="outline_width" v="0"/>
+       <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="outline_width_unit" v="MM"/>
+       <prop k="scale_method" v="diameter"/>
+       <prop k="size" v="2"/>
+       <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+       <prop k="size_unit" v="MM"/>
+       <prop k="vertical_anchor_point" v="1"/>
+      </layer>
+     </symbol>
+    </markerStyle>
+    <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+   </ComposerMapGrid>
+   <AtlasMap scalingMode="2" atlasDriven="1" margin="0.10000000000000001"/>
+   <ComposerItem pagey="30" page="1" id="map" lastValidViewScaleFactor="1.93651" positionMode="0" positionLock="false" x="10" y="30" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="210" outlineWidth="0.3" excludeFromExports="0" uuid="{a59d0d5c-9075-4edd-982f-f6ce0c50e2e4}" height="170" itemRotation="0" frame="false" pagex="10">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <customproperties/>
+ </Composition>
+ <Atlas hideCoverage="false" coverageLayer="geojson20161207120858838" singleFile="false" filenamePattern="'output_'||@atlas_featurenumber" enabled="true" filterFeatures="false" sortFeatures="false" pageNameExpression=""/>
+</Composer>
