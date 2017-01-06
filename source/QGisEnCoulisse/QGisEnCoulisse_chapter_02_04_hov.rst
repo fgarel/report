@@ -21,9 +21,21 @@ comme langage de script.
 todo :
 2 sources d'inspiration a travailler :
 
-youtube flask nginx
+ - youtube youtube deploying flask apps to an ubuntu server
+   https://www.youtube.com/watch?v=kDRRtPO0YPA
 
-https://www.codementor.io/uditagarwal/tutorials/how-to-deploy-a-django-application-on-digitalocean-du1084ylz
+ - https://www.codementor.io/uditagarwal/tutorials/how-to-deploy-a-django-application-on-digitalocean-du1084ylz
+
+# resume de la premiere source, la video
+
+
+
+
+# resume de la seconde source, le tuto
+
+# synthese des deux sources
+
+
 
 ----
 
