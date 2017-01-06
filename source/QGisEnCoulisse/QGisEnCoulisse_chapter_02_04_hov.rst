@@ -33,6 +33,143 @@ todo :
 
 # resume de la seconde source, le tuto
 
+Mise en place et deploiement :
+ - d'une application python (developpé à l'aide du framework django)
+ - derrière un serveur web (nginx)
+ - connecté entre eux via une interface wsgi (gunicorn)
+ - sur une machine distante
+
+## creation d'un nouveau projet github
+
+## installation des différents paquets
+
+```
+sudo aptitude update
+sudo aptitude install python-pip
+pip --version
+```
+Next, we install all the necessary packages on our server to run our application. The python libraries, the postgresql packages, and the Nginx server.
+```
+# Python and Debian package, python headers and postgresql library for python
+sudo apt-get install python-dev libpq-dev
+
+# Postgresql Package
+sudo apt-get install postgresql postgresql-contrib
+
+# Nginx Package
+sudo apt-get install nginx
+
+sudo apt-get install git
+
+sudo apt-get install gunicorn
+```
+
+Creation d'une base postgres
+```
+sudo su postgres
+psql
+```
+```
+CREATE DATABASE mydb;
+CREATE USER myuser WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+\q;
+exit
+```
+
+Creation d'un environnment python
+```
+sudo pip install virtualenv
+mkdir ~/myproject
+cd ~/myproject
+virtualenv myprojectenv
+source myprojectenv/bin/activate
+pip install django
+pip install psycopg2
+```
+
+pulling our git repository
+
+```
+cd ~/myproject
+git clone
+```
+
+Test de gunicorn devant l'application python
+```
+gunicorn --bind 0.0.0.0:8000 mydjangoproject.wsgi:application
+```
+
+Creation d'un script de demarrage pour gunicorn
+```
+sudo vi /etc/init/gunicorn.conf
+```
+
+```
+description "Gunicorn application server handling mydjangoproject"
+
+start on runlevel [2345]
+stop on runlevel [!2345]*
+
+respawn
+setuid root
+setgid www-data
+chdir /root/myproject
+
+exec gunicorn --workers 3 --bind unix://mydjangoproject.sock mydjangoproject.wsgi:application
+
+```
+
+
+```
+sudo service gunicorn start
+```
+
+Configuration de nginx
+
+Step 1: We will first create a site called myproject under our nginx sites-available directory
+```
+sudo nano /etc/nginx/sites-available/myproject
+```
+Step 2: Add the following lines of code to the myproject file
+
+```
+server {
+    listen 80;
+    server_name Your server name or your IP address;
+}
+```
+
+Step 3: Ignore all problems on finding favicon
+```
+location = /favicon.ico { access_log off; log_not_found off; }
+location /static/ {
+      root /root/myproject;
+}
+```
+
+Step 4: Create a new location block to match all the requests.
+```
+location / {
+     include proxy_params;
+     proxy_pass http://unix:/mydjangoproject.sock;
+}
+```
+
+Step 5: Enable the file.
+
+
+```
+sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+sudo nginx -t
+```
+
+Step 6: If no syntax errors are reported restart Nginx
+```
+sudo service nginx restart
+```
+
+
 # synthese des deux sources
 
 
