@@ -28,7 +28,103 @@ todo :
 
 # resume de la premiere source, la video
 
+installation de nginx
 
+```
+sudo apt-get install python-pip
+```
+
+```
+sudo apt-get install nginx
+```
+
+demarrage de nginx
+
+```
+sudo /etc/init.d/nginx.conf start
+````
+
+suppression du fichier de config default
+
+```
+sudo rm /etc/nginx/sites-enabled/default
+```
+
+creation d'un nouveau fichier de configuration, speial flask
+
+```
+sudo touch /etc/nginx/sites-available/flask_settings
+```
+
+
+prise en compte de ces paramètres
+
+```
+sudo ln -s /etc/nginx/sites-available/flask_settings /etc/nginx/sites-enabled/flask_settings
+```
+
+contenu de ce nouveau fichier de configuration
+
+```
+sudo vi /etc/nginx/sites-available/flask_settings
+```
+
+
+```
+server {
+        location / {
+                 proxy_path http://127.0.0.1:8000;
+                 proxy_set_header Host $host;
+                 proxy_set_header X-Real-IP $remote_addr;
+        }
+}
+```
+
+
+redemarrage de nginx
+
+```
+sudo /etc/init.d/nginx.conf restart
+````
+
+
+installation de l'environnement python
+
+pip install virtualenv
+
+mkdir my_flask_app
+
+cd my_flak_app
+
+virtualenv env
+
+source env/bin/activate
+
+pip install flask gunicorn
+
+
+which gunicorn
+
+
+touch hello.py
+
+vi hello.py
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return ('Hello there !!!')
+
+gunicorn
+
+gunicorn hello:app
+
+```
+sudo /etc/init.d/nginx.conf start
+````
 
 
 # resume de la seconde source, le tuto
